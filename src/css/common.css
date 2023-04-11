@@ -16,3 +16,23 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.timer {
+  display: flex;
+  margin-top: 10px;
+}
+.field {
+  margin-left: 10px;
+}
+.value {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.label{
+  font-style: italic;
+  font-weight: 500;
+}
+span[data-seconds] {
+color: tomato;
+}
