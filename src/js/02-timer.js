@@ -40,19 +40,21 @@ function onBtnClick() {
         const currentDate = Date.now();
         const timer = setDate.selectedDates[0].getTime() - currentDate;
         
-        console.log(timer);
+      console.log(timer);
+      console.log(typeof timer)
         const clock = convertMs(timer);
-        console.log(clock.seconds);
+        console.log(clock);
         dayTimer.textContent = addLeadingZero(clock.days);
         hoursTimer.textContent = addLeadingZero(clock.hours);
         minutesTimer.textContent = addLeadingZero(clock.minutes);
         secondsTimer.textContent = addLeadingZero(clock.seconds);
-        if (!clock.seconds) {
+        if (timer < 999) {
           clearInterval(timerId);
         }
     }, 1000)
-    
+
 }
+
 
 function convertMs(ms) {
   // Number of milliseconds per unit of time
